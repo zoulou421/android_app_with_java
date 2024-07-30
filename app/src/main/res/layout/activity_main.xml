@@ -7,39 +7,104 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-91dp">
 
-    <Button
-        android:id="@+id/btnHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:onClick="onClickButton"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent" />
+        <!--text view for heading-->
+        <TextView
+            android:id="@+id/idTVHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text=" Register Form"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="Enter your name"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
+        <!--edit text for user name-->
+
+        <EditText
+            android:id="@+id/idEdtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVHeader"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Enter User Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/idEdtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtUserName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Enter first name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/idEdtUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtFirstName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/idBtnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idEdtUserEmail"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="10dp"
+            android:text="Register User"
+            android:onClick="btnRegisterClick"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idBtnRegister"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="10dp"
+            android:text="Display user name" />
+
+        <TextView
+            android:id="@+id/textViewFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="10dp"
+            android:text="Display user Firstname" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewFirstName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="10dp"
+            android:text="Display user Email" />
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,14 +24,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-    }
 
-    public void onClickButton(View view){
-        TextView txtView=findViewById(R.id.txtMessage);
-        EditText editText=findViewById(R.id.editTextName);
-        txtView.setText("Hello "+editText.getText().toString());
-        editText.getText().clear();
 
     }
 
+
+    public void btnRegisterClick(View view) {
+        EditText editTextName=findViewById(R.id.idEdtUserName);
+        EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
+        EditText editTextEmail=findViewById(R.id.idEdtUserEmail);
+
+        TextView textViewName=findViewById(R.id.textViewName);
+        textViewName.setText(editTextName.getText().toString());
+
+        TextView textViewFirstName=findViewById((R.id.textViewFirstName));
+        textViewFirstName.setText(editTextFirstName.getText().toString());
+
+        TextView textViewEmail=findViewById(R.id.textViewEmail);
+        textViewEmail.setText(editTextEmail.getText().toString());
+
+        editTextName.getText().clear();
+        editTextFirstName.getText().clear();
+        editTextEmail.getText().clear();
+    }
 }
