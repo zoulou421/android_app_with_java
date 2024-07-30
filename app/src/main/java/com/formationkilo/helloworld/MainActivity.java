@@ -2,6 +2,7 @@ package com.formationkilo.helloworld;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickButton(View view){
         TextView txtView=findViewById(R.id.txtMessage);
-        txtView.setText("Welcome to my first android app");
+        EditText editText=findViewById(R.id.editTextName);
+        txtView.setText("Hello "+editText.getText().toString());
+        editText.getText().clear();
+
     }
 
 }
