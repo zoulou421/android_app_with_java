@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,7 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button buttonRegistration=findViewById(R.id.idBtnRegister);
+       /* Button buttonRegistration=findViewById(R.id.idBtnRegister);
         buttonRegistration.setOnClickListener(view -> {
             EditText editTextName=findViewById(R.id.idEdtUserName);
             EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
@@ -43,8 +44,33 @@ public class MainActivity extends AppCompatActivity {
             editTextName.getText().clear();
             editTextFirstName.getText().clear();
             editTextEmail.getText().clear();
-        });
+        });*/
 
+        Button buttonRegistration=findViewById(R.id.idBtnRegister);
+        buttonRegistration.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.idBtnRegister){
+            EditText editTextName=findViewById(R.id.idEdtUserName);
+            EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
+            EditText editTextEmail=findViewById(R.id.idEdtUserEmail);
+
+            TextView textViewName=findViewById(R.id.textViewName);
+            textViewName.setText(editTextName.getText().toString());
+
+            TextView textViewFirstName=findViewById((R.id.textViewFirstName));
+            textViewFirstName.setText(editTextFirstName.getText().toString());
+
+            TextView textViewEmail=findViewById(R.id.textViewEmail);
+            textViewEmail.setText(editTextEmail.getText().toString());
+
+            editTextName.getText().clear();
+            editTextFirstName.getText().clear();
+            editTextEmail.getText().clear();
+        }
 
 
     }
