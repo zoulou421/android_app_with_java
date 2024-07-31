@@ -26,26 +26,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button buttonRegistration=findViewById(R.id.idBtnRegister);
-        buttonRegistration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                EditText editTextName=findViewById(R.id.idEdtUserName);
-                EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
-                EditText editTextEmail=findViewById(R.id.idEdtUserEmail);
+        buttonRegistration.setOnClickListener(view -> {
+            EditText editTextName=findViewById(R.id.idEdtUserName);
+            EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
+            EditText editTextEmail=findViewById(R.id.idEdtUserEmail);
 
-                TextView textViewName=findViewById(R.id.textViewName);
-                textViewName.setText(editTextName.getText().toString());
+            TextView textViewName=findViewById(R.id.textViewName);
+            textViewName.setText(editTextName.getText().toString());
 
-                TextView textViewFirstName=findViewById((R.id.textViewFirstName));
-                textViewFirstName.setText(editTextFirstName.getText().toString());
+            TextView textViewFirstName=findViewById((R.id.textViewFirstName));
+            textViewFirstName.setText(editTextFirstName.getText().toString());
 
-                TextView textViewEmail=findViewById(R.id.textViewEmail);
-                textViewEmail.setText(editTextEmail.getText().toString());
+            TextView textViewEmail=findViewById(R.id.textViewEmail);
+            textViewEmail.setText(editTextEmail.getText().toString());
 
-                editTextName.getText().clear();
-                editTextFirstName.getText().clear();
-                editTextEmail.getText().clear();
-            }
+            editTextName.getText().clear();
+            editTextFirstName.getText().clear();
+            editTextEmail.getText().clear();
         });
 
 
