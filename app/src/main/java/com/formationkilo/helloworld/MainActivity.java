@@ -2,6 +2,7 @@ package com.formationkilo.helloworld;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,12 +25,35 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        Button buttonRegistration=findViewById(R.id.idBtnRegister);
+        buttonRegistration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText editTextName=findViewById(R.id.idEdtUserName);
+                EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
+                EditText editTextEmail=findViewById(R.id.idEdtUserEmail);
+
+                TextView textViewName=findViewById(R.id.textViewName);
+                textViewName.setText(editTextName.getText().toString());
+
+                TextView textViewFirstName=findViewById((R.id.textViewFirstName));
+                textViewFirstName.setText(editTextFirstName.getText().toString());
+
+                TextView textViewEmail=findViewById(R.id.textViewEmail);
+                textViewEmail.setText(editTextEmail.getText().toString());
+
+                editTextName.getText().clear();
+                editTextFirstName.getText().clear();
+                editTextEmail.getText().clear();
+            }
+        });
+
 
 
     }
 
 
-    public void btnRegisterClick(View view) {
+ /*   public void btnRegisterClick(View view) {
         EditText editTextName=findViewById(R.id.idEdtUserName);
         EditText editTextFirstName=findViewById(R.id.idEdtFirstName);
         EditText editTextEmail=findViewById(R.id.idEdtUserEmail);
@@ -46,5 +70,7 @@ public class MainActivity extends AppCompatActivity {
         editTextName.getText().clear();
         editTextFirstName.getText().clear();
         editTextEmail.getText().clear();
-    }
+    }*/
+
+
 }

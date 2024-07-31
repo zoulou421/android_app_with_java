@@ -71,8 +71,7 @@
             android:layout_marginTop="55dp"
             android:layout_marginEnd="10dp"
             android:text="Register User"
-            android:onClick="btnRegisterClick"
-            android:textAllCaps="false" />
+            android:textAllCaps="false" /><!--android:onClick="btnRegisterClick"-->
 
         <TextView
             android:id="@+id/textViewName"
